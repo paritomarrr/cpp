@@ -2,12 +2,7 @@
 using namespace std;
 int natNo(int val)
 {
-    int sum = 0;
-    for (int i = 1; i < val; i++)
-    {
-        sum = sum + i;
-        cout << sum << endl;
-    }
+    int sum = (val * (val + 1)) / 2;
     return sum;
 };
 int main()
