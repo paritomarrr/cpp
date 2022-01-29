@@ -28,8 +28,9 @@ int main()
     reverseString(ch, 5);
     for (int i = 0; i < 5; i++)
     {
-        cout << ch[i] << " ";
+        ch[i] << " ";
     }
     cout << endl
          << endl;
+    cout <<
 }
