@@ -1,28 +1,46 @@
 #include <iostream>
 using namespace std;
-double factorial(int num)
+unsigned int factorial(unsigned int num)
 {
-    int fact = 1;
-    for (int i = num; i > 0; i--)
+    unsigned int fact = 1;
+    for (unsigned int i = 1; i <= num; i++)
     {
         fact = fact * i;
+        // cout << "fact -> " << fact << endl;
     }
     // return fact;
-    if (num == 1)
-    {
-        cout << 1;
-    };
+    // if (num == 1)
+    // {
+    //     cout << 1;
+    // };
     return fact;
 };
-double permutation(int num1, int num2)
+unsigned int permutation(unsigned int num1, unsigned int num2)
 {
-    int per = factorial(num1) / (factorial(num2) * factorial(num1 - num2));
+    unsigned int n = factorial(num1);
+    unsigned int r = factorial(num2);
+    int s = num1 - num2;
+    unsigned int p = factorial(s);
+    unsigned int per = n / (r * p);
+    int ans = per / 10;
+    // cout << "per -> " << per << endl;
+    // cout << "ans -> " << ans << endl;
+    // if (per < 10)
+    // {
+    //     cout << per;
+    // }
+    // else
+    // {
+    //     cout << ans;
+    // }
+    // cout << ans;
+    // cout << per;
     cout << per;
 }
 int main()
 {
     int r, s;
     cin >> r >> s;
-    permutation(r, s);
-    return 0;
+    return permutation(r, s);
+    // return 0;
 }
